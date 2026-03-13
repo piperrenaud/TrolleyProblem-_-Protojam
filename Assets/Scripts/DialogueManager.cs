@@ -10,7 +10,9 @@ public enum Speaker
 {
     KeanuReeves,
     MichealReeves,
-    MaxVerstappen
+    MaxVerstappen,
+    MarkLenny,
+    AdrianLenny
 }
 
 [System.Serializable]
@@ -156,6 +158,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void GetCurrentSpeaker()
+    {
+        return Speaker;
+    }
     private void SetAllSpritesInactive()
     {
         if (KeanuSprite != null)
