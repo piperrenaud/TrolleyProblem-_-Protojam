@@ -174,9 +174,10 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        SetAllSpritesInactive();
         dialoguePanel.SetActive(false);
         NextSceneButton.SetActive(true);
-        SetAllSpritesInactive();
+        
         Debug.Log("Dialogue finished do smn");
     }
 }
