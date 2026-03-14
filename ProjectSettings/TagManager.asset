@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - MainSpline
+  - Trolley
   layers:
   - Default
   - TransparentFX

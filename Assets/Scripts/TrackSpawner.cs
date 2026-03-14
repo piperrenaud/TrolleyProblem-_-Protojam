@@ -18,6 +18,7 @@ public class TrackSpawner : MonoBehaviour
     private int nextIndex = 0;
     private Queue<GameObject> spawnedTracks = new Queue<GameObject>();
     private int maxTracks = 4;
+    private int? forcedNextPrefab = null;
     
     public (SplineContainer mainSpline, SplineContainer leverSpline) SpawnNextTrack()
     {
@@ -26,8 +27,18 @@ public class TrackSpawner : MonoBehaviour
             return (null, null);
         }
 
-        int prefabIndex = spawnSequence[nextIndex];
-        nextIndex = (nextIndex + 1) % spawnSequence.Length;
+        int prefabIndex;
+
+        if (forcedNextPrefab.HasValue)
+        {
+            prefabIndex = forcedNextPrefab.Value;
+            forcedNextPrefab = null;
+        }
+        else
+        {
+            prefabIndex = spawnSequence[nextIndex];
+            nextIndex = (nextIndex + 1) % spawnSequence.Length;
+        }
 
         GameObject prefab = trackPrefabs[prefabIndex];
 
@@ -58,5 +69,10 @@ public class TrackSpawner : MonoBehaviour
         }
 
         return (main, lever);
+    }
+
+    public void ForceNextTrack(int prefabIndex)
+    {
+        forcedNextPrefab = prefabIndex;
     }
 }
