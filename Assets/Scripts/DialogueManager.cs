@@ -158,9 +158,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void GetCurrentSpeaker()
+    public Speaker GetCurrentSpeaker()
     {
-        return Speaker;
+        return lines[currentIndex].speaker;
     }
     private void SetAllSpritesInactive()
     {

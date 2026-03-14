@@ -1,0 +1,68 @@
+{
+    "version": 1,
+    "name": "TrolleyControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "07bf16e6-bd1b-4121-8ed4-c05f67e1a9bf",
+            "actions": [
+                {
+                    "name": "SwitchPath",
+                    "type": "Button",
+                    "id": "2b89171b-7c58-4ac9-939f-a84d0ad0b75d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "021332f5-8819-4b97-90c3-efe90067ade1",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPath",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95845e1f-e6e5-4c9f-80ba-8d26438db9d1",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPath",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02fd61d8-54b8-401d-ba80-b68705e9d1c1",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPath",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72082250-8e09-487c-8faa-ae900ea9ca41",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPath",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
